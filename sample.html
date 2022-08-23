@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Abhi Fire Safety Services</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #dispblk {
+            position: fixed;
+            display: none;
+            background-color: rgb(255, 255, 255);
+            width: 420px;
+            margin: 0px;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: rgb(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        
+        input::placeholder,
+        textarea::placeholder {
+            color: #fff;
+            font-weight: 400;
+            font-size: 1rem;
+        }
+        
+        input:focus-visible,
+        textarea:active,
+        textarea:focus-visible {
+            border: none;
+            outline: none;
+        }
+        
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+        
+        .flex-row {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+        
+        .port-form {
+            width: 400px;
+            margin-top: 10px;
+        }
+        
+        .form {
+            color: #ffffff;
+            background-color: rgb(241, 50, 50);
+            padding: 12px;
+            border: 0px solid rgb(248, 248, 248);
+            font-size: 20px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            width: 80%;
+            resize: vertical;
+            margin-left: 5%;
+        }
+        
+        #fname {
+            width: 85%;
+        }
+        
+        #fmail {
+            width: 85%;
+        }
+        
+        #fmessage {
+            width: 85%;
+            height: 150px
+        }
+        
+        .buttoncross {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            transform: translate(0%, -50%);
+            height: fit-content;
+            width: fit-content;
+            padding: 10px;
+            margin: 10px auto;
+            font-size: 20px;
+            font-weight: bolder;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .formtext {
+            font-size: 38px;
+            font-weight: bolder;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 15px 8px;
+            background-color: rgb(241, 50, 50);
+        }
+        
+        .buttonsubmit {
+            height: 40px;
+            width: 100px;
+            margin: 0 160px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: border 1s linear;
+            outline: none;
+            border: 1px red solid;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .buttonsubmit:hover {
+            border: 3px red solid;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="dispblk">
+        <div class="ref">
+            <div class="formtext">
+                Contact
+                <div class="buttoncross" onclick="dispnone()"><span>&#10006;</span></div>
+            </div>
+            <div class="flex-col">
+                <div class="port-form">
+                    <div>
+                        <form name="contactform" autocomplete="off" action="https://formsubmit.co/bkkvarun24@gmail.com" onsubmit="return validateform()" method="POST">
+                            <input class="form" type="text" id="fname" name="name" placeholder="Name" required>
+                            <input class="form" type="mail" id="fmail" name="mail" placeholder="E-mail" required>
+                            <textarea class="form" id="fmessage" name="message" placeholder="Message"></textarea>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <button class="buttonsubmit">Button</button>
+
+
+
+
+
+        </div>
+    </div>
+
+    <script>
+        const el = document.getElementById('dispblk');
+
+        setTimeout(() => {
+            el.style.display = 'block';
+        }, 4000);
+
+        function dispnone() {
+            el.style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
