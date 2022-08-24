@@ -13,7 +13,7 @@
             position: fixed;
             display: none;
             background-color: rgb(255, 255, 255);
-            width: 420px;
+            width: 400px;
             margin: 0px;
             transform: translate(-50%, -50%);
             top: 50%;
@@ -75,14 +75,22 @@
         
         #fname {
             width: 85%;
+            border-radius: 10px;
         }
         
         #fmail {
             width: 85%;
+            border-radius: 10px;
+        }
+        
+        #fphone {
+            width: 85%;
+            border-radius: 10px;
         }
         
         #fmessage {
             width: 85%;
+            border-radius: 10px;
             height: 150px
         }
         
@@ -139,21 +147,23 @@
                 Contact
                 <div class="buttoncross" onclick="dispnone()"><span>&#10006;</span></div>
             </div>
-            <div class="flex-col">
-                <div class="port-form">
-                    <div>
-                        <form name="contactform" autocomplete="off" action="https://formsubmit.co/bkkvarun24@gmail.com" onsubmit="return validateform()" method="POST">
+            <form name="contactform" autocomplete="off" action="https://formsubmit.co/bkkvarun24@gmail.com" method="POST">
+
+                <div class="flex-col">
+                    <div class="port-form">
+                        <div>
                             <input class="form" type="text" id="fname" name="name" placeholder="Name" required>
                             <input class="form" type="mail" id="fmail" name="mail" placeholder="E-mail" required>
+                            <input class="form" type="tel" id="fphone" name="Phone" placeholder="Phone Number" pattern="^(\+)?(\d)*$" required>
                             <textarea class="form" id="fmessage" name="message" placeholder="Message"></textarea>
-                        </form>
+
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <button class="buttonsubmit">Button</button>
+                <button class="buttonsubmit" type="submit">Button</button>
 
-
+            </form>
 
 
 
@@ -165,7 +175,7 @@
 
         setTimeout(() => {
             el.style.display = 'block';
-        }, 4000);
+        }, 0000);
 
         function dispnone() {
             el.style.display = 'none';
